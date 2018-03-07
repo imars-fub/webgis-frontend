@@ -1,2 +1,2 @@
 # webgis-frontend
-Frontend source code for teh interactive Mars Analysis and Research System
+Frontend source code for the interactive Mars Analysis and Research System
