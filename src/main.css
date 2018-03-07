@@ -1,0 +1,848 @@
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e1e1e1;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #e1e1e1;
+}
+::-webkit-scrollbar-track {
+  background: #333333;
+  border: 0px none #000000;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #333333;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.428571429;
+  color: #333333;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+*[hidden] { display: none; }
+
+
+/* POPUP CUSTOM */
+.ol-popup-content {
+    min-width: 300px;
+    max-height: 230px;
+    overflow-x: auto;
+}
+/*
+.ol-popup {
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.5));
+  border-radius: 5px;
+}
+.ol-attribution li {
+  font-size: 10px;
+}*/
+
+
+/* REST **/
+
+caption.queryResult {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  color: #333;
+}
+table.queryResult {
+  width: 100%;
+  padding: 2px;
+}
+th.resultRow {
+  background: #dddddd;
+}
+table.resultRow {
+  width: 100%;
+}
+/* Sonst date-Feld umgebrochen */
+table.featureInfo {
+  width: 100%;
+}
+table.featureInfo {
+  //border-collapse: collapse;
+  padding-bottom: 20px;
+}
+
+th.featureInfo {
+  font-size: 10px;
+  font-weight: normal;
+}
+tr.featureInfo {
+  width: 100%;
+}
+tr.featureInfo:nth-child(even) td{
+  background: #EEE;
+}
+
+td.resultRow td.featureInfo {
+  padding: 2px;
+}
+td.featureInfo {
+  font-size: 11px;
+  font-weight: normal;
+}
+#hrscPreviewModal .modal-body {
+  background-color: #000;
+}
+
+.ol-mouse-position {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 270px;
+  height: 30px;
+  padding: 7px 10px 3px 10px !important;
+  line-height: 12px;
+  text-align: right;
+}
+.ol-mouse-position-text{
+  position: absolute;
+  right: 16em;
+  top: 1.8em;
+  display: block;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+  z-index:100000;
+}
+
+.ol-workflow-text{
+  position: absolute;
+  right: 22em;
+  top: 5.6em;
+  display: block;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  z-index:100000;
+}
+
+html, body, #map {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  /*background-color: #000000;*/
+}
+
+map:-moz-full-screen {
+  height: 100%;
+}
+map:-webkit-full-screen {
+  height: 100%;
+}
+map:-ms-fullscreen {
+  height: 100%;
+}
+map:fullscreen {
+  height: 100%;
+}
+
+.ol-control {
+  font-size: 10px;
+  padding: 2px;
+  border: 2px solid #ccc;
+  color: #fff;
+  background-color: rgba(60,60,60,0.8);
+}
+
+.ol-control:hover {
+  background-color: rgba(60,60,60,0.8);
+}
+
+.ol-control button {
+  margin: 0;
+  background-color: rgba(60,60,60,0.6);
+}
+
+.ol-control button:hover,
+.ol-control button:focus {
+  background-color: rgba(255,255,255,0.4);
+}
+
+/*** layerSwitcher ***/
+
+.layer-switcher {
+  font-size: 10px;
+  position: absolute;
+  right: 1em;
+  top: 12em;
+  bottom: 0.5em;
+}
+
+.layer-switcher .ls-panel {
+  padding-top: 10px;
+  width: 270px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding-right: 10px;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgba(60,60,60,0.8);
+}
+
+.layer-switcher ul {
+  padding-left: 0.8em;
+}
+
+.ControlHeader {
+  display: inline-block;
+}
+
+.indentgroup {
+  position:relative;
+  left: 5px;
+  top: -2px;
+  width: 170px;
+}
+
+li.highlight.layer {
+  border: solid 1.25px #3399CC;
+  border-radius: 4px;
+  background-color:rgba(255,255,255,0.4);
+}
+
+.indentlayer {
+  position:relative;
+  left: 5px;
+  /* shitty on Mac
+  top: -3px; */
+  width: 180px;
+  top: -3px;
+}
+
+span.fa-info-circle {
+  position:relative;
+  font-size: 14px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: right;
+  top: -1px;
+}
+
+span.fa-info-circle:hover {
+  color: #DDD;
+}
+
+.dynamic {
+  /*color: #f00;*/
+  font-size: 12px;
+}
+
+/* Toolbar Buttons */
+.ol-toolbar button {
+  margin: 0 5px 8px 0;
+  background-color: rgba(25,25,25,1);
+}
+.ol-toolbar button.disabled:hover,
+.ol-toolbar button.disabled:focus {
+  background-color: rgba(60,60,60,0.8);
+}
+.ol-toolbar button.disabled{
+  background-color: rgba(60,60,60,1);
+}
+
+.ol-toolbar button.disabled:before{
+  color: #666;
+}
+
+.ol-toolbar button.pushed {
+  background-color: rgba(255,0,0,0.6);
+}
+
+.ol-toolbar .toolbar-loading{
+  position: absolute;
+  left: 1em;
+  bottom: .5em;
+  font-size: 24px;
+  margin-right: 20px;
+  color: red;
+}
+
+.ol-scale-line {
+  position: absolute;
+  left: .5em;
+  bottom: .5em;
+  background-color: rgba(60,60,60,0.6);
+  border: 2px solid #cccccc;
+}
+
+#layerInfoModal .modal-body {
+  background-color: #222;
+  color: white;
+  z-index: 100000;
+}
+
+#layerInfoModal .modal-header {
+  background-color: #222;
+}
+
+#layerInfoModal .modal-title {
+  color: white;
+}
+
+#layerInfoModal button.close {
+  color: white;
+}
+
+/*ul.toolbar{
+  margin: 5px;
+  padding: 5px;
+  //border: 1px solid #cccccc;
+  //background-color: rgba(60,60,60,0.6);
+  border-radius: 4px;
+  //background-color:#555;
+}
+
+li.toolbarelement {
+  display: inline;
+  padding: 7px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  /*margin: 5px;*/
+  /*background-color:#555;*/
+  /*opacity: 1.;
+}*/
+
+/*li.toolbarelement:hover {
+  background-color: #333;
+  opacity: 0.6;
+}*/
+
+.ol-toolbar {
+  top: 4.5em;
+  right: 1em;
+  color: #FFF;
+  width: 270px;
+  text-align: right;
+  border-radius: 4px;
+  padding: 2px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  background-color: rgba(60,60,60,0.8);
+}
+
+.ol-toolbar button {
+  font-size: 16px;
+  display: inline;
+}
+.ol-toolbar button.pushed {
+  font-size: 16px;
+  display: inline;
+  background-color: rgba(255,0,0,0.6);
+}
+
+/*
+.ol-toolbar:hover {
+  background-color: rgba(60,60,60,0.6);
+}*/
+
+i.fa-caret-right {
+  font-size: 16px;
+  padding: 3px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: right;
+  width: 12px;
+}
+.fold.fa.dummy{
+  width: 12px;
+}
+i.fa-caret-down {
+  font-size: 16px;
+  padding: 3px;
+  cursor: pointer;
+  color: #FFF;
+  text-align: right;
+  width: 12px;
+}
+
+.ol-full-screen {
+  position: absolute;
+  top: .5em;
+  left: 3.4em;
+  right: auto;
+}
+
+div.ol-full-screen.ol-unselectable.ol-control > button {
+    height: 2em;
+    width: 2em;
+}
+
+i.fa-ban {
+  font-size: 12px;
+  cursor: pointer;
+  color: #FFF;
+}
+i.fa-ban:hover {
+  color: #DDD;
+}
+li.over {
+  border-style: solid;
+  padding-top: 20px;
+  background-color: rgba(255,255,255,.5);
+  border-top: 2px thick #000;
+}
+
+.ol-zoomslider {
+  top: 7.2em;
+  background-color: rgba(60,60,60,0.6);
+}
+.ol-zoomslider:hover {
+  background-color: rgba(30,30,30,0.3);
+}
+.ol-zoomslider button {
+  background-color: rgba(30,30,30,1);
+}
+
+input.opacitySlider.disabled {
+  opacity: 0.3;
+}
+
+#heightLegend {
+  position: absolute;
+  width: 90px;
+  height: 180px;
+  left: .5em;
+  bottom: 4em;
+  z-index: 100000;
+}
+
+img.legend-image {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  opacity: 0.8;
+}
+
+#timePanel {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0.5em;
+  height: 12em;
+  width: 620px;
+  font-size: 10px;
+  font-weight: bold;
+  /*-webkit-transition: all 2s;
+  -moz-transition: all 2s;
+  transition: all 2s;*/
+  /*transition: height 300ms linear;*/
+  background-color: rgba(60,60,60,0.8);
+}
+
+#timePanel.collapsed{
+  width: 270px;
+  height: 3em;
+}
+
+#timePanel .time-panel-button i{
+  margin: .3em;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#earthTimeSlider {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  z-index: 2;
+  opacity: 1;
+}
+
+#earthTimeSlider .slider-track {
+  height: 5px;
+}
+
+#earthTimeSlider > div.slider-handle.round {
+  width: 15px;
+  height: 15px;
+}
+
+#earthTimeSlider > div.slider-tick-container > div {
+  width: 15px;
+  height: 15px;  
+}
+
+#timePanel.collapsed #earthTimeSlider {
+  display: none;
+  opacity: 0;
+  /*-webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all .5s;*/
+}
+
+#timePanel input {
+  color: black;
+  font-weight: bold;
+}
+
+#timePanel.collapsed input {
+  display: none;
+}
+
+#timePanel.collapsed #startBox,#timePanel.collapsed #stopBox {
+  display: none;
+}
+
+#stopBox.time-panel, #startBox.time-panel {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(34,34,34,0.6);
+  background-color: rgba(34,34,34,0.6);
+}
+
+input[type=number].solInput,
+input[type=number].yearInput  {
+  -moz-appearance: textfield;
+}
+
+input[type="number"].solInput:hover,
+input[type="number"].solInput:focus,
+input[type="number"].yearInput:hover,
+input[type="number"].yearInput:focus {
+  -moz-appearance: number-input;
+}
+
+/* Sorting */
+.sort-panel #sortText {
+  position: relative;
+  left: 1em;
+  font-weight: bold;
+  font-size: 10px;
+  float: left;
+}
+
+.sort-panel.disabled {
+  opacity: 0.5;
+}
+
+.sort-panel button {
+  position: relative;
+  left: 1em;
+  cursor:pointer;
+  font-size: 16px;
+  float: left;
+  width: 1.375em;
+  height: 1.375em;
+  margin: 0 5px 0px 0px;
+  background-image: none;
+  background-color: rgba(25,25,25,1);
+  padding: 2px;
+  border: none;
+  border-radius: 2px;
+}
+
+.sort-panel button.pushed {
+  background-color: rgba(255,0,0,0.6);
+}
+.sort-panel button.pushed:focus {
+  background-color: rgba(255,0,0,0.6);
+  border: none;
+}
+
+.sort-panel button:hover {
+  background-color: rgba(255,255,255,0.4);
+  border: none;
+}
+
+.sortbutton {
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 2px;
+    padding:0px 2px;
+    position: relative;
+    left: 0px;/* Abstand zum Text */
+    bottom: 1px;/* etwas anheben */
+    outline: 0 none;/* unterdrückt den blauen Rahmen nach Click */
+    display:inline-block;
+    cursor:pointer;
+    font-family:Trebuchet MS;
+}
+.sortbutton:hover {
+    background-color:#dddddd;
+}
+.sortbutton:active {
+    background-color: #333333;
+    color: white;
+}
+
+/*div.ol-attribution {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0px;
+  right: 0px;
+  top: 1em;
+  width: 200px;
+  height: 30px;
+  background-color: rgba(60,60,60,0.8);
+  border-radius: 4px;
+  padding: 2px;
+  border: 2px solid #cccccc;
+}
+*/
+.ol-attribution.ol-uncollapsible {
+  position: absolute;
+  height: 4em;
+  width: 240px;
+  background-color: rgba(60,60,60,0.6);
+  bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+}
+
+div.ol-attribution ul li {
+  display: none;
+}
+
+/*.ol-attribution ul {
+    margin: 0;
+    padding: 0 .5em;
+    font-size: .7rem;
+    line-height: 1.375em;
+    color: #000;
+    text-shadow: 0 0 2px #fff;
+}*/
+
+.ol-attribution :after {
+  color: white;
+  font-weight: bold;
+  content: '© 2017 i-Mars UCL/DLR/FUB/EPFL/UNOTT/UoS';
+  font-size: 14px;
+  text-shadow: none;
+  opacity: 0.6;
+  line-height: 120%;
+  position: relative;
+  top: -4px;
+}
+
+/* Goto */
+#gotoLLBox {
+  position: absolute;
+  left: 7.0em;
+  top: .5em;
+  width: 152px;
+  height: 31px;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  background-color: rgba(60,60,60,0.6);
+  padding-left: 2px;
+  padding-top: 1.5px;  
+  padding-bottom: 0px;
+  color: white;
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+/*   vertical-align: super; */
+  outline: 0 none; /* unterdrückt den blauen Rahmen nach Click */    
+}
+
+#latBox {
+    float: left;
+    width: 53px;
+    height: 26px;
+    overflow: hidden;
+    padding: 3px;
+}
+
+#latText {
+    float: left;
+    width: 15px;
+    margin-top: 1px;
+}
+
+#lonBox {
+    float: left;
+    width: 58px;
+    height: 26px;
+    overflow: hidden;
+    padding-top: 3px;
+}
+
+#lonText {
+    float: left;
+    width: 15px;
+    margin-top: 1px;
+    margin-right: 3px;
+}
+
+#gotoHrscBox {
+  display: none;
+  position: absolute;
+  left: 22.7em;
+  top: .5em;
+  width: 117px;
+  height: 30px;
+  border: 2px solid #cccccc;
+  border-radius: 4px;
+  background-color: rgba(60,60,60,0.6);
+  padding-left: 2px;
+  padding-top: 1.5px;  
+  padding-bottom: 0px;
+  color: white;
+  /*display: block;*/
+  font-size: 10px;
+  font-weight: bold;
+/*   vertical-align: super; */
+  outline: 0 none; /* unterdrückt den blauen Rahmen nach Click */    
+}
+
+#hrscBox {
+    display: none;
+    float: left;
+    width: 78px;
+    height: 26px;
+    overflow: hidden;
+/*     margin-left: 10px; */
+    padding: 3px;
+}
+
+#hrscText {
+    display: none;
+    float: left;
+    width: 37px;
+    margin-top: 1px;
+    margin-right: 2px;
+}
+
+.latInput, .hrscInput {
+    color: black;
+    font-weight: bold;
+    float: left;
+    width: 32px;
+    height: 17px;
+}
+
+.lonInput {
+    color: black;
+    font-weight: bold;
+    float: left;
+    width: 39px;
+    height: 17px;
+}
+
+.hrscInput {
+  display: none;
+}
+/* verhindert, dass im Zahlen-Eingabefeld die auf-und-ab-Pfeile erscheinen */
+.latInput::-webkit-inner-spin-button, .lonInput::-webkit-inner-spin-button,
+    .hrscInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+/* prevents occurrance of spinning buttons in number input fields in Firefox brwoser */
+input[type=number].latInput,input[type=number].lonInput {
+  -moz-appearance: textfield;
+}
+
+#gotoLLButton {
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    padding:0px 2px;
+    position: relative;
+    left: 5px; /* Abstand zum Text */
+    top: 22%;
+    outline: 0 none; /* unterdrückt den blauen Rahmen nach Click */
+    display:inline-block;
+    cursor:pointer;
+    font-family:Trebuchet MS;
+    float: left;
+}
+
+#gotoHRSCButton {
+    display: none;
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    padding:0px 2px;
+    position: relative;
+    left: 4px; /* Abstand zum Text */
+    top: 22%;
+    outline: 0 none; /* unterdrückt den blauen Rahmen nach Click */
+    /*display:inline-block;*/
+    cursor:pointer;
+    font-family:Trebuchet MS;
+    float: left;
+}
+/*#ProjectionSwitcher {
+  top: 0.5em;
+  right: 290px;
+}*/
+
+.projection-switcher {
+  position: absolute;
+  top: 0.5em;
+  right: 29em;
+  text-align: left;
+}
+
+.projection-switcher button:focus, .projection-switcher button:hover {
+  background-color: #ccc;
+}
+
+/*.reveal .fa {
+  font-family: 'FontAwesome';
+  font-style: normal;
+}*/
+
+.projection-switcher button.disabled:hover,
+.projection-switcher button.disabled:focus {
+  background-color: rgba(60,60,60,0.8);
+}
+.projection-switcher button.disabled{
+  color: rgba(160,160,160,1);
+  background-color: rgba(60,60,60,1);
+}
