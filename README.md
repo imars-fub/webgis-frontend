@@ -1,6 +1,9 @@
 # webgis-frontend
 Frontend source code for the interactive Mars Analysis and Research System
 
+to install, run:
+npm install
+
 to serve, run:
 ./node_modules/.bin/closure-util serve config.json 
 
