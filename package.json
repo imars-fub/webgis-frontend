@@ -1,6 +1,7 @@
 {
   "name": "iMars-webGIS",
   "version": "2.0.2",
+  "repository": "https://github.com/imars-fub/webgis-frontend",
   "description": "The interactive Mars Analysis and Research System for the iMars project",
   "main": "src/main.js",
   "scripts": {
